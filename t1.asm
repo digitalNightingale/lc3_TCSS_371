@@ -1,0 +1,16 @@
+.ORIG x3000
+
+    ADD R0, R0, #6
+    ADD R1, R1, #13
+    JSR MULT
+    STR R0,R3,#0
+    LEA R4 PRODUCT
+    STR R0,R4,#0
+
+.FILL xD000
+PRODUCT  .BLKW 20
+
+MULT ADD R2, R2, #6
+RET
+
+.END 
